@@ -1,0 +1,19 @@
+ Using Javacript Jest testing Framework to mock HMSLocation.
+ There is a problem of how to mock HMSLocation with the Jest framework
+ as describe here:
+"
+	 I'm trying to mock the @hmscore/react-native-hms-location with jest. The function that one of my providers uses is HMSLocation.FusedLocation.Native.hasPermission(), but in one of my test I always get the following:
+
+	TypeError: Cannot read property 'Native' of undefined at call (C:\laragon\www\qmy-project\providers\LocationProvider.js:65:57)
+	I've tried to mock all the Library like this:
+
+	jest.mock('@hmscore/react-native-hms-location');
+	Even like this another way:
+
+	jest.mock('@hmscore/react-native-hms-location', () => {
+	    const original = jest.requireActual('@hmscore/react-native-hms-location');    
+	    return original;
+	});
+	Always is the same. Any help please?
+"
+is there is a sample of how to use the Jest framework with HMSLocation?
